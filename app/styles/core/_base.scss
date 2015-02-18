@@ -1,0 +1,73 @@
+.browsehappy {
+  background: #ccc;
+  color: #000;
+  margin: $spacing-regular 0;
+  padding: $spacing-regular 0;
+}
+
+html {
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+body {
+  color: $grey-dark;
+  font: $font-size-base $font-family-base;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1 {
+  color: $white;
+  font: $font-size-display $font-family-bold;
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 $spacing-large;
+}
+
+h3 {
+  margin: 0 0 $spacing-medium;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.left-side {
+  background-color: $grey-dark;
+  border-right: $spacing-regular solid $grey;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: $spacing-large;
+  width: 200px;
+
+  a {
+    color: $grey-lightest;
+  }
+}
+
+.right-side {
+  background-color: $grey-light;
+  color: $grey-dark;
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  padding: $spacing-medium $spacing-large;
+  width: 99%;
+}
+
+.experiment-area {
+  background-color: $white;
+  flex-grow: 2;
+  padding: $spacing-regular;
+}

@@ -1,0 +1,113 @@
+.add-list {
+  background-color: $grey-light;
+  border-radius: $rounded-corners-base;
+  min-width: 250px;
+  padding: $spacing-tiny;
+  width: 250px;
+
+  input {
+    appearance: none;
+    border-radius: none;
+    box-shadow: none;
+    display: block;
+    padding: $spacing-tiny;
+    width: 95%;
+
+    &[type="text"] {
+      background-color: $grey-lightest;
+      border: 0;
+      border-bottom: solid $border-normal $grey-light;
+      border-radius: $rounded-corners-tiny;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: $spacing-tiny;
+      padding: $spacing-tiny $spacing-tiny 0;
+      transition: border .3s;
+    }
+
+    &:focus {
+      border-bottom: solid $border-normal $grey;
+      outline: none;
+    }
+  }
+
+  button {
+    appearance: none;
+    background-color: $grey;
+    border: 0;
+    border-radius: $rounded-corners-tiny;
+    box-shadow: none;
+    color: $white;
+    display: inline-block;
+    line-height: $line-height-base;
+    padding: $spacing-tiny $spacing-medium;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $grey-dark;
+    }
+  }
+
+  a {
+    color: $grey;
+    font-size: $font-size-large;
+
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}
+
+.add-list-button {
+  appearance: none;
+  background-color: $grey;
+  border: 0;
+  border-radius: $rounded-corners-tiny;
+  box-shadow: none;
+  color: $white;
+  display: inline-block;
+  font-size: $font-size-base;
+  height: 35px;
+  line-height: $line-height-base;
+  min-width: 240px;
+  padding: $spacing-tiny $spacing-medium;
+  text-align: left;
+  width: 240px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $grey-lightest;
+    color: $grey;
+  }
+}
+
+.list {
+  background-color: $grey-lightest;
+  border-radius: $rounded-corners-base;
+  display: flex;
+  flex-direction: column;
+  margin-right: $spacing-medium;
+  min-width: 250px;
+  padding: $spacing-tiny;
+  width: 250px;
+}
+
+.list-area {
+  display: flex;
+}
+
+.lists {
+  display: flex;
+  padding: $spacing-regular;
+}
+
+.experiment-area {
+  height: 90%;
+  overflow: auto;
+}
