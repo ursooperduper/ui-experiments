@@ -1,3 +1,5 @@
 <div class="list" ng-show="trelloList" ng-repeat="list in lists">
-  <h3>{{ list.name }}</h3>
+  <h3 class="list-title">{{ list.name }}</h3>
+  <sk-trello-card></sk-trello-card>
+  <button class="add-card-button" ng-click="addCard({{ list.id }})">Add a card...</button>
 </div>

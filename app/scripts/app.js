@@ -11,7 +11,6 @@
 angular
   .module('uiExperimentsApp', [
     'ngAnimate',
-    'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',

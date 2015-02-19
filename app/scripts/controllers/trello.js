@@ -29,6 +29,13 @@ angular.module('uiExperimentsApp')
       templateUrl: 'views/trello/partials/sk-trello-list.html'
     };
   })
+  .directive('skTrelloCard', function() {
+    return {
+      restrict: 'E',
+      replace: true,
+      templateUrl: 'views/trello/partials/sk-trello-card.html'
+    };
+  })
   .controller('ListController', function($scope) {
     $scope.showAddListForm = function() {
       $scope.addListButton = false;
@@ -49,11 +56,17 @@ angular.module('uiExperimentsApp')
     $scope.addList = function() {
       if ($scope.list !== null) {
         $scope.newList = {
+          id: $scope.lists.length,
           name: $scope.list.name
         };
         $scope.lists.push($scope.newList);
         $scope.list.name = null;
         $scope.hideAddListForm();
       }
+    };
+  })
+  .controller('CardController', function($scope) {
+    $scope.addCard = function() {
+      console.log('Add a card');
     };
   });

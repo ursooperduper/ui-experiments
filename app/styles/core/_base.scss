@@ -71,3 +71,13 @@ h3 {
   flex-grow: 2;
   padding: $spacing-regular;
 }
+
+.toc {
+  list-style-type: none;
+  margin: 0;
+  padding: $spacing-large 0;
+
+  li {
+    padding-bottom: $spacing-tiny;
+  }
+}
