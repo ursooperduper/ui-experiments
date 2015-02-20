@@ -60,7 +60,7 @@ angular.module('uiExperimentsApp')
           name: $scope.list.name
         };
         $scope.lists.push($scope.newList);
-        $scope.list.name = null;
+        $scope.list = null;
         $scope.hideAddListForm();
       }
     };
