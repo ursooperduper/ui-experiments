@@ -15,32 +15,32 @@ angular.module('uiExperimentsApp')
       'Karma'
     ];
   })
-  .directive('skTrelloAddList', function() {
+  .directive('skAddList', function() {
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'views/trello/partials/sk-trello-add-list.html'
+      templateUrl: 'views/trello/partials/sk-add-list.html'
     };
   })
-  .directive('skTrelloList', function() {
+  .directive('skList', function() {
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'views/trello/partials/sk-trello-list.html'
+      templateUrl: 'views/trello/partials/sk-list.html'
     };
   })
-  .directive('skTrelloCard', function() {
+  .directive('skCard', function() {
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'views/trello/partials/sk-trello-card.html'
+      templateUrl: 'views/trello/partials/sk-card.html'
     };
   })
-  .directive('skTrelloAddCard', function() {
+  .directive('skAddCard', function() {
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'views/trello/partials/sk-trello-add-card.html'
+      templateUrl: 'views/trello/partials/sk-add-card.html'
     };
   })
   .controller('ListController', function($scope) {
