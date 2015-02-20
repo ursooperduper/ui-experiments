@@ -16,7 +16,7 @@ angular.module('uiExperimentsApp')
     ];
   })
   .directive('skTrelloAddList', function() {
-    return{
+    return {
       restrict: 'E',
       replace: true,
       templateUrl: 'views/trello/partials/sk-trello-add-list.html'
@@ -34,6 +34,13 @@ angular.module('uiExperimentsApp')
       restrict: 'E',
       replace: true,
       templateUrl: 'views/trello/partials/sk-trello-card.html'
+    };
+  })
+  .directive('skTrelloAddCard', function() {
+    return {
+      restrict: 'E',
+      replace: true,
+      templateUrl: 'views/trello/partials/sk-trello-add-card.html'
     };
   })
   .controller('ListController', function($scope) {
@@ -66,7 +73,31 @@ angular.module('uiExperimentsApp')
     };
   })
   .controller('CardController', function($scope) {
+    $scope.list.cards = [];
+    $scope.list.card = null;
+
+    $scope.showAddCardForm = function() {
+      $scope.addCardButton = false;
+      $scope.addCardForm = true;
+    };
+
+    $scope.hideAddCardForm = function() {
+      $scope.addCardButton = true;
+      $scope.addCardForm = false;
+    };
+
+    $scope.hideAddCardForm();
+
     $scope.addCard = function() {
-      console.log('Add a card');
+      console.log('Add a card', $scope.list.id);
+      if ($scope.list.card !== null) {
+        $scope.newCard = {
+          id: $scope.cards.length,
+          name: $scope.card.title
+        };
+        $scope.cards.push($scope.newCard);
+        $scope.list.card = null;
+        $scope.hideAddCardForm();
+      }
     };
   });
