@@ -145,3 +145,58 @@
 .list-title {
   padding: $spacing-regular 0 0 $spacing-medium;
 }
+
+
+.add-card {
+  background-color: $grey-light;
+  border-radius: $rounded-corners-base;
+  min-width: 234px;
+  padding: $spacing-regular;
+  width: 230px;
+
+  textarea {
+    appearance: none;
+    border: 0;
+    border-radius: none;
+    box-shadow: none;
+    display: block;
+    font-size: $font-size-base;
+    height: 50px;
+    margin-bottom: $spacing-regular;
+    padding: $spacing-tiny;
+    width: 95%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    appearance: none;
+    background-color: $grey;
+    border: 0;
+    border-radius: $rounded-corners-tiny;
+    box-shadow: none;
+    color: $white;
+    display: inline-block;
+    line-height: $line-height-base;
+    padding: $spacing-tiny $spacing-medium;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $grey-dark;
+    }
+  }
+
+  a {
+    color: $grey;
+    font-size: $font-size-large;
+
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}

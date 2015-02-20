@@ -1,0 +1,7 @@
+<div class="add-card" ng-show="addCardForm">
+  <form name="addNewCard" novalidate>
+    <textarea name="cardTitle" ng-model="card.title" required></textarea>
+    <button ng-click="addCard()">Add</button>
+    <a href="" ng-click="hideAddCardForm()"><i class="fa fa-times"></i></a>
+  </form>
+</div>
