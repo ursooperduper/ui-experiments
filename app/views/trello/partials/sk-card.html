@@ -1,1 +1,3 @@
-<div class="card" ng-controller="CardController"></div>
+<div class="card" ng-show="showCard" ng-repeat="card in list.cards">
+  <p>{{ card.title }}</p>
+</div>

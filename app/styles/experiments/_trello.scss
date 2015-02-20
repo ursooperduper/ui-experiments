@@ -200,3 +200,11 @@
     }
   }
 }
+
+.card {
+  background-color: $white;
+  border-radius: $rounded-corners-tiny;
+  margin: $spacing-regular auto;
+  padding: $spacing-regular;
+  width: 90%;
+}

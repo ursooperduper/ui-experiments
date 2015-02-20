@@ -57,7 +57,7 @@ angular.module('uiExperimentsApp')
     $scope.lists = [];
     $scope.list = null;
     $scope.buttonText = 'Add list...';
-    $scope.trelloList = true;
+    $scope.showList = true;
     $scope.hideAddListForm();
 
     $scope.addList = function() {
@@ -74,7 +74,8 @@ angular.module('uiExperimentsApp')
   })
   .controller('CardController', function($scope) {
     $scope.list.cards = [];
-    $scope.list.card = null;
+    $scope.card = null;
+    $scope.showCard = true;
 
     $scope.showAddCardForm = function() {
       $scope.addCardButton = false;
@@ -90,14 +91,13 @@ angular.module('uiExperimentsApp')
 
     $scope.addCard = function() {
       console.log('Add a card', $scope.list.id);
-      if ($scope.list.card !== null) {
+      if ($scope.card !== null) {
         $scope.newCard = {
-          id: $scope.cards.length,
-          name: $scope.card.title
+          id: $scope.list.cards.length,
+          title: $scope.card.title
         };
-        $scope.cards.push($scope.newCard);
-        $scope.list.card = null;
-        $scope.hideAddCardForm();
+        $scope.list.cards.push($scope.newCard);
+        $scope.card = null;
       }
     };
   });

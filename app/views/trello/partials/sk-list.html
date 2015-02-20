@@ -1,4 +1,4 @@
-<div class="list" ng-show="trelloList" ng-repeat="list in lists">
+<div class="list" ng-show="showList" ng-repeat="list in lists">
   <h3 class="list-title">{{ list.name }}</h3>
   <div ng-controller="CardController">
     <sk-card></sk-card>
