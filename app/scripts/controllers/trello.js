@@ -53,20 +53,24 @@ angular.module('uiExperimentsApp')
       $scope.addListButton = true;
       $scope.addListForm = false;
     };
-
-    $scope.lists = [];
+    $scope.models = {
+      selected: null,
+      lists: {}
+    };
     $scope.list = null;
     $scope.buttonText = 'Add list...';
     $scope.showList = true;
     $scope.hideAddListForm();
+    var numLists = 0;
 
     $scope.addList = function() {
       if ($scope.list !== null) {
-        $scope.newList = {
-          id: $scope.lists.length,
-          name: $scope.list.name
+        numLists += 1;
+        $scope.models.lists[numLists] = {
+          label : $scope.list.name,
+          cards : []
         };
-        $scope.lists.push($scope.newList);
+        //$scope.models.lists[$scope.list.name] = [];
         $scope.list = null;
         $scope.hideAddListForm();
       }
@@ -90,13 +94,8 @@ angular.module('uiExperimentsApp')
     $scope.hideAddCardForm();
 
     $scope.addCard = function() {
-      console.log('Add a card', $scope.list.id);
       if ($scope.card !== null) {
-        $scope.newCard = {
-          id: $scope.list.cards.length,
-          title: $scope.card.title
-        };
-        $scope.list.cards.push($scope.newCard);
+        $scope.list.cards.push({label: $scope.card.title});
         $scope.card = null;
       }
     };

@@ -1,4 +1,20 @@
-.add-list {
+.experiment-area {
+  height: 90%;
+  overflow: auto;
+
+  h2 {
+    padding-left: $spacing-regular;
+  }
+}
+
+.add-list-button,
+.add-card-button {
+  height: 35px;
+  padding: $spacing-tiny $spacing-medium;
+  text-align: left;
+}
+
+.add-list-form {
   background-color: $grey-light;
   border-radius: $rounded-corners-base;
   min-width: 250px;
@@ -6,16 +22,12 @@
   width: 250px;
 
   input {
-    appearance: none;
-    border-radius: none;
-    box-shadow: none;
     display: block;
     padding: $spacing-tiny;
     width: 95%;
 
     &[type="text"] {
       background-color: $grey-lightest;
-      border: 0;
       border-bottom: solid $border-normal $grey-light;
       border-radius: $rounded-corners-tiny;
       font-size: $font-size-base;
@@ -27,24 +39,15 @@
 
     &:focus {
       border-bottom: solid $border-normal $grey;
-      outline: none;
     }
   }
 
   button {
-    appearance: none;
     background-color: $grey;
-    border: 0;
     border-radius: $rounded-corners-tiny;
-    box-shadow: none;
     color: $white;
-    display: inline-block;
     line-height: $line-height-base;
     padding: $spacing-tiny $spacing-medium;
-
-    &:focus {
-      outline: none;
-    }
 
     &:hover {
       background-color: $grey-dark;
@@ -62,24 +65,13 @@
 }
 
 .add-list-button {
-  appearance: none;
   background-color: $grey;
-  border: 0;
   border-radius: $rounded-corners-tiny;
-  box-shadow: none;
   color: $white;
-  display: inline-block;
   font-size: $font-size-base;
-  height: 35px;
   line-height: $line-height-base;
   min-width: 240px;
-  padding: $spacing-tiny $spacing-medium;
-  text-align: left;
   width: 240px;
-
-  &:focus {
-    outline: none;
-  }
 
   &:hover {
     background-color: $grey-lightest;
@@ -87,54 +79,12 @@
   }
 }
 
-.list {
-  background-color: $grey-lightest;
-  border-radius: $rounded-corners-base;
-  display: flex;
-  flex-direction: column;
-  margin-right: $spacing-medium;
-  min-height: 70px;
-  min-width: 250px;
-  padding: 0;
-  width: 250px;
-}
-
-.list-area {
-  display: flex;
-}
-
-.lists {
-  align-items: flex-start;
-  display: flex;
-  padding: $spacing-regular;
-}
-
-.experiment-area {
-  height: 90%;
-  overflow: auto;
-}
-
-.cards {
-  flex-grow: 2;
-}
-
 .add-card-button {
-  appearance: none;
   background-color: $grey-light;
-  border: 0;
   border-radius: 0 0 $rounded-corners-base $rounded-corners-base;
-  box-shadow: none;
-  display: inline-block;
   font-size: $font-size-small;
-  height: 35px;
   margin-right: $spacing-medium;
-  padding: $spacing-tiny $spacing-medium;
-  text-align: left;
   width: 250px;
-
-  &:focus {
-    outline: none;
-  }
 
   &:hover {
     background-color: $grey;
@@ -142,49 +92,26 @@
   }
 }
 
-.list-title {
-  padding: $spacing-regular 0 0 $spacing-medium;
-}
-
-
-.add-card {
-  background-color: $grey-light;
+.add-card-form {
   border-radius: $rounded-corners-base;
   min-width: 234px;
   padding: $spacing-regular;
   width: 230px;
 
   textarea {
-    appearance: none;
-    border: 0;
-    border-radius: none;
-    box-shadow: none;
-    display: block;
     font-size: $font-size-base;
     height: 50px;
     margin-bottom: $spacing-regular;
     padding: $spacing-tiny;
     width: 95%;
-
-    &:focus {
-      outline: none;
-    }
   }
 
   button {
-    appearance: none;
     background-color: $grey;
-    border: 0;
     border-radius: $rounded-corners-tiny;
-    box-shadow: none;
     color: $white;
-    display: inline-block;
     line-height: $line-height-base;
     padding: $spacing-tiny $spacing-medium;
-
-    &:focus {
-      outline: none;
-    }
 
     &:hover {
       background-color: $grey-dark;
@@ -201,10 +128,54 @@
   }
 }
 
+.list-area {
+  display: flex;
+}
+
+.lists {
+  align-items: flex-start;
+  display: flex;
+  padding: $spacing-regular;
+}
+
+.list {
+  background-color: $grey-lightest;
+  border-radius: $rounded-corners-base;
+  box-shadow: 1px 1px 0 0 #eee;
+  display: flex;
+  flex-direction: column;
+  margin-right: $spacing-medium;
+  min-height: 70px;
+  min-width: 250px;
+  padding: 0;
+  position: relative; // to make dnd work
+  width: 250px;
+
+  .dndDraggingSource {
+    display: none;
+  }
+
+  .dndPlaceholder {
+    background-color: #ddd;
+    display: block;
+    min-height: 40px;
+  }
+}
+
+.list-title {
+  padding: $spacing-regular 0 0 $spacing-medium;
+}
+
+.cards {
+  flex-grow: 2;
+}
+
 .card {
   background-color: $white;
   border-radius: $rounded-corners-tiny;
+  box-shadow: 0 1px 1px 0 #ccc;
   margin: $spacing-regular auto;
   padding: $spacing-regular;
+  position: relative; // to make dnd work
   width: 90%;
 }

@@ -1,6 +1,6 @@
-<div class="list" ng-show="showList" ng-repeat="list in lists">
-  <h3 class="list-title">{{ list.name }}</h3>
-  <div ng-controller="CardController">
+<div class="list" ng-show="showList" ng-repeat="list in models.lists" dnd-list="list.cards">
+  <h3 class="list-title">{{list.label}}</h3>
+  <div ng-controller="CardController" dnd-list="list.cards">
     <sk-card></sk-card>
     <sk-add-card></sk-add-card>
     <button class="add-card-button" ng-click="showAddCardForm()" ng-show="addCardButton">Add a card...</button>

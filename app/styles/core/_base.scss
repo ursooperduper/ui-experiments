@@ -39,6 +39,19 @@ h3 {
   margin: 0 0 $spacing-medium;
 }
 
+input,
+textarea,
+button {
+  appearance: none;
+  border: 0;
+  box-shadow: none;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;
