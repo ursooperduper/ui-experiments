@@ -45,14 +45,14 @@ angular.module('uiExperimentsApp')
   })
   .controller('ListController', function($scope) {
 
-    // Handlers for showing/hiding the button & add list form
-    $scope.showAddListForm = function() {
-      $scope.addListButton = false;
-      $scope.addListForm = true;
-    };
-    $scope.hideAddListForm = function() {
-      $scope.addListButton = true;
-      $scope.addListForm = false;
+    //Initializers
+    $scope.addListButton = true;
+    $scope.addListForm = false;
+
+    // Handles the display of the add list button or form  
+    $scope.toggleAddListForm = function() {
+      $scope.addListButton = !$scope.addListButton;
+      $scope.addListForm = !$scope.addListForm;
     };
 
     // Base model that will contain the list & card data
@@ -60,10 +60,6 @@ angular.module('uiExperimentsApp')
       selected: null,
       lists: {}
     };
-
-
-    // Make sure the add list form is hidden at the start
-    $scope.hideAddListForm();
 
     // Initializers
     // Use a number for the object name to keep the correct list order
@@ -81,8 +77,9 @@ angular.module('uiExperimentsApp')
           cards : []
         };
 
+        // Cleanup
         $scope.list = null;
-        $scope.hideAddListForm();
+        $scope.toggleAddListForm();
       }
     };
   })
@@ -91,19 +88,14 @@ angular.module('uiExperimentsApp')
     // Initializers
     $scope.list.cards = [];
     $scope.card = null;
+    $scope.addCardButton = true;
+    $scope.addCardForm = false;
 
-    // Handlers for showing/hiding the button & add card form
-    $scope.showAddCardForm = function() {
-      $scope.addCardButton = false;
-      $scope.addCardForm = true;
+    // Handles the display of the add card button or form
+    $scope.toggleAddCardForm = function() {
+      $scope.addCardButton = !$scope.addCardButton;
+      $scope.addCardForm = !$scope.addCardForm;
     };
-    $scope.hideAddCardForm = function() {
-      $scope.addCardButton = true;
-      $scope.addCardForm = false;
-    };
-
-    // The add card form should be hidden at first
-    $scope.hideAddCardForm();
 
     // Adds a new card to a list
     $scope.addCard = function() {
