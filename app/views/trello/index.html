@@ -12,8 +12,9 @@
   <div class="list-area" ng-controller="ListController">
     <div class="lists">
       <sk-list></sk-list>
-      <button class="add-list-button" ng-click="showAddListForm()" ng-show="addListButton">{{ buttonText }}</button>
+      <button class="add-list-button" ng-click="showAddListForm()" ng-show="addListButton">Add List...</button>
       <sk-add-list></sk-add-list>
     </div>
   </div>
+  <p>JSON: {{ $scope.models.lists }}</p>
 </div>

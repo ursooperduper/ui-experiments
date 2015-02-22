@@ -44,58 +44,74 @@ angular.module('uiExperimentsApp')
     };
   })
   .controller('ListController', function($scope) {
+
+    // Handlers for showing/hiding the button & add list form
     $scope.showAddListForm = function() {
       $scope.addListButton = false;
       $scope.addListForm = true;
     };
-
     $scope.hideAddListForm = function() {
       $scope.addListButton = true;
       $scope.addListForm = false;
     };
+
+    // Base model that will contain the list & card data
     $scope.models = {
       selected: null,
       lists: {}
     };
-    $scope.list = null;
-    $scope.buttonText = 'Add list...';
-    $scope.showList = true;
-    $scope.hideAddListForm();
-    var numLists = 0;
 
+
+    // Make sure the add list form is hidden at the start
+    $scope.hideAddListForm();
+
+    // Initializers
+    // Use a number for the object name to keep the correct list order
+    var numLists = 0;
+    $scope.list = null;
+
+    // Adds a new list to the board
     $scope.addList = function() {
       if ($scope.list !== null) {
         numLists += 1;
+
+        // Add a new list object to the model
         $scope.models.lists[numLists] = {
           label : $scope.list.name,
           cards : []
         };
-        //$scope.models.lists[$scope.list.name] = [];
+
         $scope.list = null;
         $scope.hideAddListForm();
       }
     };
   })
   .controller('CardController', function($scope) {
+
+    // Initializers
     $scope.list.cards = [];
     $scope.card = null;
-    $scope.showCard = true;
 
+    // Handlers for showing/hiding the button & add card form
     $scope.showAddCardForm = function() {
       $scope.addCardButton = false;
       $scope.addCardForm = true;
     };
-
     $scope.hideAddCardForm = function() {
       $scope.addCardButton = true;
       $scope.addCardForm = false;
     };
 
+    // The add card form should be hidden at first
     $scope.hideAddCardForm();
 
+    // Adds a new card to a list
     $scope.addCard = function() {
       if ($scope.card !== null) {
+        // Add the card to the appropriate list
         $scope.list.cards.push({label: $scope.card.title});
+
+        // Cleanup, reset the card
         $scope.card = null;
       }
     };

@@ -1,4 +1,4 @@
-<div class="list" ng-show="showList" ng-repeat="list in models.lists" dnd-list="list.cards">
+<div class="list" ng-repeat="list in models.lists" dnd-list="list.cards">
   <h3 class="list-title">{{list.label}}</h3>
   <div ng-controller="CardController" dnd-list="list.cards">
     <sk-card></sk-card>
