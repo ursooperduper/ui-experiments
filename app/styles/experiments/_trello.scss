@@ -94,16 +94,18 @@
 
 .add-card-form {
   border-radius: $rounded-corners-base;
+  margin: 0 auto;
   min-width: 234px;
   padding: $spacing-regular;
   width: 230px;
 
   textarea {
+    border-radius: $rounded-corners-tiny;
     font-size: $font-size-base;
     height: 50px;
-    margin-bottom: $spacing-regular;
-    padding: $spacing-tiny;
-    width: 95%;
+    margin-left: $spacing-tiny;
+    padding: $spacing-regular;
+    width: 90%;
   }
 
   button {
@@ -111,6 +113,7 @@
     border-radius: $rounded-corners-tiny;
     color: $white;
     line-height: $line-height-base;
+    margin: $spacing-tiny;
     padding: $spacing-tiny $spacing-medium;
 
     &:hover {
@@ -177,5 +180,5 @@
   margin: $spacing-regular auto;
   padding: $spacing-regular;
   position: relative; // to make dnd work
-  width: 90%;
+  width: 85%;
 }
