@@ -3,7 +3,7 @@
 describe('Controller: TrelloCtrl', function() {
 
   // load the controller's module
-  beforeEach(module('uiExperimentsApp'));
+  beforeEach(module('app'));
 
   var TrelloCtrl,
     scope;

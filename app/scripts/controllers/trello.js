@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name uiExperimentsApp.controller:TrelloController
+ * @name app.controller:TrelloController
  * @description
  * # TrelloController
- * Controller of the uiExperimentsApp
+ * Controller of the app
  */
-angular.module('uiExperimentsApp')
+angular.module('app')
   .controller('TrelloController', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
