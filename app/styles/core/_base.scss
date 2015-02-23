@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 $spacing-tiny;
+  margin: 0;
 }
 
 h3 {
@@ -66,21 +66,21 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: $spacing-large;
-  width: 200px;
+  padding: $spacing-large $spacing-regular;
+  width: 160px;
 
   a {
-    color: $grey-lightest;
+    color: $grey-lighter;
   }
 }
 
 .right-side {
-  background-color: $grey-light;
+  background-color: $white;
   color: $grey-dark;
   display: flex;
   flex: 2;
   flex-direction: column;
-  padding: $spacing-medium $spacing-large;
+  padding: $spacing-large;
   width: 99%;
 }
 
@@ -101,7 +101,11 @@ button {
 }
 
 .intro {
+  margin-bottom: $spacing-regular;
+  width: 70%;
+
+  h2,
   p {
-    padding: $spacing-regular 0;
+    margin-bottom: $spacing-tiny;
   }
 }

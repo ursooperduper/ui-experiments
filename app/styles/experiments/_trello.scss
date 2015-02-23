@@ -1,8 +1,10 @@
 .experiment-area {
+  background-color: $turquoise;
   height: 90%;
   overflow: auto;
 
   h2 {
+    color: $white;
     padding-left: $spacing-regular;
   }
 }
@@ -27,7 +29,7 @@
     width: 95%;
 
     &[type="text"] {
-      background-color: $grey-lightest;
+      background-color: $grey-lighter;
       border-bottom: solid $border-normal $grey-light;
       border-radius: $rounded-corners-tiny;
       font-size: $font-size-base;
@@ -43,29 +45,29 @@
   }
 
   button {
-    background-color: $grey;
+    background-color: darken($turquoise, 10%);
     border-radius: $rounded-corners-tiny;
     color: $white;
     line-height: $line-height-base;
     padding: $spacing-tiny $spacing-medium;
 
     &:hover {
-      background-color: $grey-dark;
+      background-color: darken($turquoise, 20%);
     }
   }
 
   a {
-    color: $grey;
+    color: darken($turquoise, 10%);
     font-size: $font-size-large;
 
     &:hover {
-      color: $grey-dark;
+      color: darken($turquoise, 20%);
     }
   }
 }
 
 .add-list-button {
-  background-color: $grey;
+  background-color: darken($turquoise, 10%);
   border-radius: $rounded-corners-tiny;
   color: $white;
   font-size: $font-size-base;
@@ -74,8 +76,7 @@
   width: 240px;
 
   &:hover {
-    background-color: $grey-lightest;
-    color: $grey;
+    background-color: darken($turquoise, 20%);
   }
 }
 
@@ -87,8 +88,7 @@
   width: 250px;
 
   &:hover {
-    background-color: $grey;
-    color: $white;
+    background-color: $grey-lighter;
   }
 }
 
@@ -109,7 +109,7 @@
   }
 
   button {
-    background-color: $grey;
+    background-color: darken($turquoise, 10%);
     border-radius: $rounded-corners-tiny;
     color: $white;
     line-height: $line-height-base;
@@ -117,16 +117,18 @@
     padding: $spacing-tiny $spacing-medium;
 
     &:hover {
-      background-color: $grey-dark;
+      background-color: darken($turquoise, 20%);
     }
   }
 
   a {
-    color: $grey;
-    font-size: $font-size-large;
+    color: darken($turquoise, 10%);
+    font-size: $font-size-display;
+    margin: 0;
+    padding-top: $spacing-regular;
 
     &:hover {
-      color: $grey-dark;
+      color: darken($turquoise, 20%);
     }
   }
 }
@@ -142,9 +144,9 @@
 }
 
 .list {
-  background-color: $grey-lightest;
+  background-color: $grey-light;
   border-radius: $rounded-corners-base;
-  box-shadow: 1px 1px 0 0 #eee;
+  box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
   display: flex;
   flex-direction: column;
   margin-right: $spacing-medium;
@@ -176,9 +178,13 @@
 .card {
   background-color: $white;
   border-radius: $rounded-corners-tiny;
-  box-shadow: 0 1px 1px 0 #ccc;
+  box-shadow: 0 1px 1px 0 $grey;
   margin: $spacing-regular auto;
   padding: $spacing-regular;
   position: relative; // to make dnd work
   width: 85%;
+
+  &:hover {
+    background-color: $grey-lightest;
+  }
 }
