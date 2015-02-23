@@ -49,11 +49,14 @@ angular.module('uiExperimentsApp')
     $scope.addListButton = true;
     $scope.addListForm = false;
 
-    // Handles the display of the add list button or form  
+    // Handles the display of the add list button or form
     $scope.toggleAddListForm = function() {
       $scope.addListButton = !$scope.addListButton;
       $scope.addListForm = !$scope.addListForm;
     };
+
+    // $rootScope.$on('documentClicked', _close);
+    // $rootScope.$on('escapePressed', _close);
 
     // Base model that will contain the list & card data
     $scope.models = {
