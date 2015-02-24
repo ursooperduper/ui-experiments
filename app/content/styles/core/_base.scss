@@ -20,11 +20,6 @@ body {
   padding: 0;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
-
 h1 {
   color: $white;
   font: $font-size-display $font-family-bold;
@@ -107,5 +102,16 @@ button {
   h2,
   p {
     margin-bottom: $spacing-tiny;
+  }
+}
+
+.experiment-area {
+  background-color: $turquoise;
+  height: 90%;
+  overflow: auto;
+
+  h2 {
+    color: $white;
+    padding-left: $spacing-regular;
   }
 }
