@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: TrelloCtrl', function() {
+describe('Controller: AboutController', function () {
 
   // load the controller's module
   beforeEach(module('app'));
 
-  var TrelloCtrl,
+  var AboutController,
     scope;
 
-  // Initialize the controller and mock a scope
+  // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    TrelloCtrl = $controller('TrelloCtrl', {
+    AboutController = $controller('AboutController', {
       $scope: scope
     });
   }));
