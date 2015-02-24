@@ -1,0 +1,9 @@
+<div class="card"
+     ng-repeat="card in vmc.list.cards"
+     dnd-draggable="card"
+     dnd-moved="vmc.list.cards.splice($index, 1)"
+     dnd-effect-allowed="move"
+     dnd-selected="vm.models.selected = card"
+     ng-class="{'selected': vm.models.selected === card}">
+  <p>{{ card.label }}</p>
+</div>

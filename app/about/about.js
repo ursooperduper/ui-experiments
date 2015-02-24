@@ -8,7 +8,7 @@
  * Controller of the app
  */
 angular.module('app')
-  .controller('MainController', function ($scope) {
+  .controller('AboutController', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

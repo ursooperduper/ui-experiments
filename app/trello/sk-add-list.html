@@ -1,0 +1,7 @@
+<div class="add-list-form" ng-show="vm.addListForm">
+  <form name="addNewList" novalidate>
+    <input type="text" name="listName" ng-model="vm.list.name" placeholder="Enter a list title..." required>
+    <button ng-click="vm.addList()">Save</button>
+    <a href="" ng-click="vm.toggleAddListForm()"><i class="fa fa-times"></i></a>
+  </form>
+</div>

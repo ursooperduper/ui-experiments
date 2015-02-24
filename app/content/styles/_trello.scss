@@ -36,7 +36,7 @@
       line-height: $line-height-base;
       margin-bottom: $spacing-tiny;
       padding: $spacing-tiny $spacing-tiny 0;
-      transition: border .3s;
+      //transition: border .3s;
     }
 
     &:focus {
@@ -187,4 +187,9 @@
   &:hover {
     background-color: $grey-lightest;
   }
+}
+
+.magic-wand {
+
+  border-color: $white;
 }

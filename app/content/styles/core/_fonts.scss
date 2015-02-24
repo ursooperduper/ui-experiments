@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'FontAwesome Icons';
+  src: url('/content/fonts/fontawesome-webfont.eot'); // IE9 Compat Modes
+  src: url('/content/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('/content/fonts/fontawesome-webfont.woff2') format('woff2'), // Super Modern Browsers
+       url('/content/fonts/fontawesome-webfont.woff') format('woff'), // Pretty Modern Browsers
+       url('/content/fonts/fontawesome-webfont.ttf')  format('truetype'), // Safari, Android, iOS
+       url('/content/fonts/fontawesome-webfont.svg#svgFontName') format('svg'); // Legacy iOS
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('/content/fonts/roboto-regular-webfont.eot');
+  src: url('/content/fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype;'),
+       url('/content/fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('/content/fonts/roboto-regular-webfont.woff') format('woff'),
+       url('/content/fonts/roboto-regular-webfont.ttf') format('truetype'),
+       url('/content/fonts/roboto-regular-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('/content/fonts/roboto-bold-webfont.eot');
+  src: url('/content/fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/content/fonts/roboto-bold-webfont.woff2') format('woff2'),
+       url('/content/fonts/roboto-bold-webfont.woff') format('woff'),
+       url('/content/fonts/roboto-bold-webfont.ttf') format('truetype'),
+       url('/content/fonts/roboto-bold-webfont.svg#svgFontName') format('svg');
+}

@@ -1,9 +1,0 @@
-<div class="card"
-     ng-repeat="card in list.cards"
-     dnd-draggable="card"
-     dnd-moved="list.cards.splice($index, 1)"
-     dnd-effect-allowed="move"
-     dnd-selected="models.selected = card"
-     ng-class="{'selected': models.selected === card}">
-  <p>{{ card.label }}</p>
-</div>
