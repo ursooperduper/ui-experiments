@@ -10,21 +10,21 @@
    */
    function ListController() {
      // vm stands for ViewModel
-     var vm = this;
+     var vml = this;
 
      //Initializers
-     vm.addListButton = true;
-     vm.addListForm = false;
-     vm.addListButtonLabel = 'Add List...';
+     vml.addListButton = true;
+     vml.addListForm = false;
+     vml.addListButtonLabel = 'Add List...';
 
      // Handles the display of the add list button or form
-     vm.toggleAddListForm = function() {
-       vm.addListButton = !vm.addListButton;
-       vm.addListForm = !vm.addListForm;
+     vml.toggleAddListForm = function() {
+       vml.addListButton = !vml.addListButton;
+       vml.addListForm = !vml.addListForm;
      };
 
      // Base model that will contain the list & card data
-     vm.models = {
+     vml.models = {
        selected: null,
        lists: {}
      };
@@ -32,22 +32,22 @@
      // Initializers
      // Use a number for the object name to keep the correct list order
      var numLists = 0;
-     vm.list = null;
+     vml.list = null;
 
      // Adds a new list to the board
-     vm.addList = function() {
-       if (vm.list !== null) {
+     vml.addList = function() {
+       if (vml.list !== null) {
          numLists += 1;
 
          // Add a new list object to the model
-         vm.models.lists[numLists] = {
-           label : vm.list.name,
+         vml.models.lists[numLists] = {
+           label : vml.list.name,
            cards : []
          };
 
          // Cleanup
-         vm.list = null;
-         vm.toggleAddListForm();
+         vml.list = null;
+         vml.toggleAddListForm();
        }
      };
    }

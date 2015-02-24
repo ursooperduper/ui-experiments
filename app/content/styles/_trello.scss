@@ -36,7 +36,7 @@
       line-height: $line-height-base;
       margin-bottom: $spacing-tiny;
       padding: $spacing-tiny $spacing-tiny 0;
-      //transition: border .3s;
+      transition: border .3s;
     }
 
     &:focus {
@@ -81,7 +81,7 @@
 }
 
 .add-card-button {
-  background-color: $grey-light;
+  background-color: $grey-lighter;
   border-radius: 0 0 $rounded-corners-base $rounded-corners-base;
   font-size: $font-size-small;
   margin-right: $spacing-medium;

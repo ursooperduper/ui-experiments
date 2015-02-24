@@ -15,12 +15,12 @@
      .when('/', {
        templateUrl: 'about/about.html',
        controller: 'AboutController',
-       controllerAs: 'vm'
+       controllerAs: 'vma'
      })
      .when('/trello', {
        templateUrl: 'trello/index.html',
        controller: 'ListController',
-       controllerAs: 'vm'
+       controllerAs: 'vml'
      })
      .otherwise({
        redirectTo: '/'
