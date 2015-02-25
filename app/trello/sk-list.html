@@ -1,5 +1,8 @@
 <div class="list" ng-repeat="list in vml.models.lists" dnd-list="list.cards">
-  <h3 class="list-title">{{ list.label }}</h3>
+  <div class="list-header">
+    <h3 class="list-title">{{ list.label }}</h3>
+    <i class="fa fa-chevron-circle-down"></i>
+  </div>
   <div ng-controller="CardController as vmc" dnd-list="list.cards">
     <sk-card></sk-card>
     <sk-add-card></sk-add-card>

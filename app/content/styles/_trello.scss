@@ -70,14 +70,14 @@
 }
 
 .add-card-button {
-  background-color: $grey-light;
+  background-color: $grey-lighter;
   border-radius: 0 0 $rounded-corners-base $rounded-corners-base;
   font-size: $font-size-small;
   margin-right: $spacing-medium;
   width: 250px;
 
   &:hover {
-    background-color: $grey-lighter;
+    background-color: $grey-lightest;
   }
 }
 
@@ -133,7 +133,7 @@
 }
 
 .list {
-  background-color: $grey-light;
+  background-color: $grey-lighter;
   border-radius: $rounded-corners-base;
   box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
   display: flex;
@@ -150,14 +150,10 @@
   }
 
   .dndPlaceholder {
-    background-color: #ddd;
+    background-color: $grey-light;
     display: block;
     min-height: 40px;
   }
-}
-
-.list-title {
-  padding: $spacing-regular 0 0 $spacing-medium;
 }
 
 .cards {
@@ -168,22 +164,47 @@
   background-color: $white;
   border-radius: $rounded-corners-tiny;
   box-shadow: 0 1px 1px 0 $grey;
+  display: flex;
+  justify-content: baseline;
   margin: $spacing-regular auto;
   padding: $spacing-regular;
   position: relative; // to make dnd work
   width: 85%;
 
+  i {
+    padding-top: $spacing-tiny/2;
+    visibility: hidden;
+  }
+
   &:hover {
     background-color: $grey-lightest;
+
+    i {
+      visibility: visible;
+      color: $grey-light;
+    }
   }
 
   p {
+    flex-grow: 2;
     margin: 0;
     padding: 0;
   }
+
+
 }
 
-.magic-wand {
+.list-header {
+  display: flex;
+  justify-content: baseline;
+  padding: $spacing-regular;
 
-  border-color: $white;
+  h3 {
+    flex-grow: 2;
+  }
+
+  i {
+    color: $grey;
+    padding-top: $spacing-tiny/2;
+  }
 }
