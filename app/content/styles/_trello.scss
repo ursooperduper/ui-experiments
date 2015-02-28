@@ -6,26 +6,26 @@
 }
 
 .add-list-form {
-  background-color: $grey-light;
-  border-radius: $rounded-corners-base;
+  width: 250px;
   min-width: 250px;
   padding: $spacing-tiny;
-  width: 250px;
+  border-radius: $rounded-corners-base;
+  background-color: $grey-light;
 
   input {
     display: block;
-    padding: $spacing-tiny;
     width: 95%;
+    padding: $spacing-tiny;
 
     &[type="text"] {
-      background-color: $grey-lighter;
-      border-bottom: solid $border-normal $grey-light;
-      border-radius: $rounded-corners-tiny;
-      font-size: $font-size-base;
-      line-height: $line-height-base;
       margin-bottom: $spacing-tiny;
       padding: $spacing-tiny $spacing-tiny 0;
       transition: border .3s;
+      border-bottom: solid $border-normal $grey-light;
+      border-radius: $rounded-corners-tiny;
+      background-color: $grey-lighter;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
     }
 
     &:focus {
@@ -34,11 +34,11 @@
   }
 
   button {
-    background-color: darken($turquoise, 10%);
+    padding: $spacing-tiny $spacing-medium;
     border-radius: $rounded-corners-tiny;
+    background-color: darken($turquoise, 10%);
     color: $white;
     line-height: $line-height-base;
-    padding: $spacing-tiny $spacing-medium;
 
     &:hover {
       background-color: darken($turquoise, 20%);
@@ -56,13 +56,13 @@
 }
 
 .add-list-button {
-  background-color: darken($turquoise, 10%);
+  width: 240px;
+  min-width: 240px;
   border-radius: $rounded-corners-tiny;
+  background-color: darken($turquoise, 10%);
   color: $white;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  min-width: 240px;
-  width: 240px;
 
   &:hover {
     background-color: darken($turquoise, 20%);
@@ -70,11 +70,11 @@
 }
 
 .add-card-button {
-  background-color: $grey-lighter;
-  border-radius: 0 0 $rounded-corners-base $rounded-corners-base;
-  font-size: $font-size-small;
-  margin-right: $spacing-medium;
   width: 250px;
+  margin-right: $spacing-medium;
+  border-radius: 0 0 $rounded-corners-base $rounded-corners-base;
+  background-color: $grey-lighter;
+  font-size: $font-size-small;
 
   &:hover {
     background-color: $grey-lightest;
@@ -82,28 +82,28 @@
 }
 
 .add-card-form {
-  border-radius: $rounded-corners-base;
-  margin: 0 auto;
-  min-width: 234px;
-  padding: $spacing-regular;
   width: 230px;
+  min-width: 234px;
+  margin: 0 auto;
+  padding: $spacing-regular;
+  border-radius: $rounded-corners-base;
 
   textarea {
-    border-radius: $rounded-corners-tiny;
-    font-size: $font-size-base;
+    width: 90%;
     height: 50px;
     margin-left: $spacing-tiny;
     padding: $spacing-regular;
-    width: 90%;
+    border-radius: $rounded-corners-tiny;
+    font-size: $font-size-base;
   }
 
   button {
-    background-color: darken($turquoise, 10%);
-    border-radius: $rounded-corners-tiny;
-    color: $white;
-    line-height: $line-height-base;
     margin: $spacing-tiny;
     padding: $spacing-tiny $spacing-medium;
+    border-radius: $rounded-corners-tiny;
+    background-color: darken($turquoise, 10%);
+    color: $white;
+    line-height: $line-height-base;
 
     &:hover {
       background-color: darken($turquoise, 20%);
@@ -111,10 +111,10 @@
   }
 
   a {
-    color: darken($turquoise, 10%);
-    font-size: $font-size-display;
     margin: 0;
     padding-top: $spacing-regular;
+    color: darken($turquoise, 10%);
+    font-size: $font-size-display;
 
     &:hover {
       color: darken($turquoise, 20%);
@@ -127,32 +127,32 @@
 }
 
 .lists {
-  align-items: flex-start;
   display: flex;
   padding: $spacing-regular;
+  align-items: flex-start;
 }
 
 .list {
-  background-color: $grey-lighter;
-  border-radius: $rounded-corners-base;
-  box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
   display: flex;
-  flex-direction: column;
-  margin-right: $spacing-medium;
-  min-height: 70px;
-  min-width: 250px;
-  padding: 0;
   position: relative; // to make dnd work
   width: 250px;
+  min-width: 250px;
+  min-height: 70px;
+  margin-right: $spacing-medium;
+  padding: 0;
+  border-radius: $rounded-corners-base;
+  background-color: $grey-lighter;
+  box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
+  flex-direction: column;
 
   .dndDraggingSource {
     display: none;
   }
 
   .dndPlaceholder {
-    background-color: $grey-light;
     display: block;
     min-height: 40px;
+    background-color: $grey-light;
   }
 }
 
@@ -161,15 +161,15 @@
 }
 
 .card {
-  background-color: $white;
-  border-radius: $rounded-corners-tiny;
-  box-shadow: 0 1px 1px 0 $grey;
   display: flex;
-  justify-content: baseline;
-  margin: $spacing-regular auto;
-  padding: $spacing-regular;
   position: relative; // to make dnd work
   width: 85%;
+  margin: $spacing-regular auto;
+  padding: $spacing-regular;
+  border-radius: $rounded-corners-tiny;
+  background-color: $white;
+  box-shadow: 0 1px 1px 0 $grey;
+  justify-content: baseline;
 
   i {
     padding-top: $spacing-tiny/2;
@@ -180,48 +180,52 @@
     background-color: $grey-lightest;
 
     i {
-      visibility: visible;
       color: $grey-light;
+      visibility: visible;
     }
   }
 
   p {
-    flex-grow: 2;
     margin: 0;
     padding: 0;
+    flex-grow: 2;
   }
 }
 
 .list-header {
   display: flex;
-  justify-content: baseline;
   padding: $spacing-regular;
+  justify-content: baseline;
 
   h3 {
     flex-grow: 2;
   }
 
   i {
-    color: $grey;
     padding-top: $spacing-tiny/2;
+    color: $grey;
   }
 }
 
 .list-menu {
-  background-color: $white;
-  box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
-  left: 220px;
-  padding: $spacing-medium;
   position: absolute;
   top: 30px;
+  left: 220px;
   width: 200px;
+  padding: $spacing-medium;
+  background-color: $white;
+  box-shadow: 1px 1px 1px 2px rgba(127, 127, 127, .2);
+  z-index: 10000;
 
   ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
   }
 
+  li {
+    padding-bottom: $spacing-tiny;
+  }
 }
 
 .list-menu-header {
@@ -229,11 +233,29 @@
   justify-content: baseline;
 
   h4 {
-    flex-grow: 2;
+    width: 90%;
     text-align: center;
+    flex-grow: 2;
   }
 
   i:hover {
     color: $grey-dark;
+  }
+}
+
+.divider {
+  margin-top: $spacing-regular;
+  padding-top: $spacing-regular;
+  border-top: 1px solid $grey-light;
+}
+
+
+.text-link {
+  margin: 0;
+  color: darken($turquoise, 10%);
+  font-size: $font-size-base;
+
+  &:hover {
+    color: darken($turquoise, 20%);
   }
 }
