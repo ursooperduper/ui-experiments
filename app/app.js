@@ -34,7 +34,8 @@
       'ngRoute',
       'ngSanitize',
       'ngTouch',
-      'dndLists'
+      'dndLists',
+      'offClick'
     ])
     .config(routeConfig);
 

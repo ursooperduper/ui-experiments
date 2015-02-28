@@ -190,8 +190,6 @@
     margin: 0;
     padding: 0;
   }
-
-
 }
 
 .list-header {
@@ -206,5 +204,36 @@
   i {
     color: $grey;
     padding-top: $spacing-tiny/2;
+  }
+}
+
+.list-menu {
+  background-color: $white;
+  box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
+  left: 220px;
+  padding: $spacing-medium;
+  position: absolute;
+  top: 30px;
+  width: 200px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.list-menu-header {
+  display: flex;
+  justify-content: baseline;
+
+  h4 {
+    flex-grow: 2;
+    text-align: center;
+  }
+
+  i:hover {
+    color: $grey-dark;
   }
 }

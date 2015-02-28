@@ -16,11 +16,16 @@
      vml.addListButton = true;
      vml.addListForm = false;
      vml.addListButtonLabel = 'Add List...';
+     vml.listMenu = false;
 
      // Handles the display of the add list button or form
      vml.toggleAddListForm = function() {
        vml.addListButton = !vml.addListButton;
        vml.addListForm = !vml.addListForm;
+     };
+
+     vml.showListMenu = function() {
+       vml.listMenu = !vml.listMenu;
      };
 
      // Base model that will contain the list & card data

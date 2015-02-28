@@ -1,15 +1,16 @@
 (function() {
   'use strict';
 
-  function addList() {
+  function listMenu() {
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'trello/sk-add-list.html'
+      templateUrl: 'trello/sk-list-menu.html'
     };
   }
 
   angular
     .module('app')
-    .directive('skAddList', addList);
+    .directive('skListMenu', listMenu);
+
 })();

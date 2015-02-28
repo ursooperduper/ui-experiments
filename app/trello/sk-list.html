@@ -1,11 +1,12 @@
 <div class="list" ng-repeat="list in vml.models.lists" dnd-list="list.cards">
   <div class="list-header">
-    <h3 class="list-title">{{ list.label }}</h3>
-    <i class="fa fa-chevron-circle-down"></i>
+    <h3>{{ list.label }}</h3>
+    <a href="" ng-click="vml.showListMenu()"><i class="fa fa-chevron-circle-down"></i></a>
   </div>
+  <sk-list-menu></sk-list-menu>
   <div ng-controller="CardController as vmc" dnd-list="list.cards">
     <sk-card></sk-card>
     <sk-add-card></sk-add-card>
-    <button class="add-card-button" ng-click="vmc.toggleAddCardForm()" ng-show="vmc.addCardButton">Add a card...</button>
+    <button class="add-card-button" ng-click="vmc.toggleAddCardForm(); focusInput=true" ng-show="vmc.addCardButton">Add a card...</button>
   </div>
 </div>
