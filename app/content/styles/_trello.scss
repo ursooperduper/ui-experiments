@@ -5,9 +5,7 @@ $list-width: 250px;
   color: $white;
 }
 
-.list-area {
-  display: flex;
-}
+.list-area { display: flex; }
 
 .lists {
   display: flex;
@@ -43,9 +41,7 @@ $list-width: 250px;
   background-color: $grey-lighter;
   font-size: $font-size-small;
 
-  &:hover {
-    background-color: $grey-lightest;
-  }
+  &:hover { background-color: $grey-lightest; }
 }
 
 .add-list-form {
@@ -66,9 +62,7 @@ $list-width: 250px;
   font-size: $font-size-base;
   line-height: $line-height-base;
 
-  &:focus {
-    border-bottom: solid $border-normal $grey;
-  }
+  &:focus { border-bottom: solid $border-normal $grey; }
 }
 
 .add-card-form {
@@ -109,9 +103,7 @@ $list-width: 250px;
   color: darken($turquoise, 10%);
   font-size: $font-size-display;
 
-  &:hover {
-    color: darken($turquoise, 20%);
-  }
+  &:hover { color: darken($turquoise, 20%); }
 }
 
 .list {
@@ -127,9 +119,7 @@ $list-width: 250px;
   box-shadow: 1px 1px 1px 1px darken($turquoise, 5%);
   flex-direction: column;
 
-  .dndDraggingSource {
-    display: none;
-  }
+  .dndDraggingSource { display: none; }
 
   .dndPlaceholder {
     display: block;
@@ -143,9 +133,7 @@ $list-width: 250px;
   padding: $spacing-regular;
   justify-content: baseline;
 
-  .list-label {
-    flex-grow: 2;
-  }
+  .list-label { flex-grow: 2; }
 
   i {
     padding-top: $spacing-tiny/2;
@@ -170,9 +158,7 @@ $list-width: 250px;
     list-style-type: none;
   }
 
-  .list-menu-items {
-    padding-bottom: $spacing-tiny;
-  }
+  .list-menu-items { padding-bottom: $spacing-tiny; }
 }
 
 .list-menu-header {
@@ -185,9 +171,7 @@ $list-width: 250px;
     flex-grow: 2;
   }
 
-  i:hover {
-    color: $grey-dark;
-  }
+  i:hover { color: $grey-dark; }
 }
 
 .list-menu-toggle {
@@ -195,9 +179,7 @@ $list-width: 250px;
   color: darken($turquoise, 10%);
   font-size: $font-size-base;
 
-  &:hover {
-    color: darken($turquoise, 20%);
-  }
+  &:hover { color: darken($turquoise, 20%); }
 }
 
 .divider {
@@ -206,9 +188,7 @@ $list-width: 250px;
   border-top: 1px solid $grey-light;
 }
 
-.cards {
-  flex-grow: 2;
-}
+.cards { flex-grow: 2; }
 
 .card {
   display: flex;

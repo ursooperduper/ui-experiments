@@ -12,18 +12,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  margin: 0;
-}
+h6 { margin: 0; }
 
 h1 {
   color: $white;
   font: $font-size-display $font-family-bold;
 }
 
-p {
-  margin-bottom: $spacing-tiny;
-}
+p { margin-bottom: $spacing-tiny; }
 
 input,
 textarea,

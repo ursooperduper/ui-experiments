@@ -15,7 +15,7 @@
      //Initializers
      vml.addListButton = true;
      vml.addListForm = false;
-     vml.addListButtonLabel = 'Add List...';
+     // Stores the visibility states of each list menu
      vml.listMenu = {};
      // Use a number for the object name to keep the correct list order
      var numLists = 0;
@@ -32,6 +32,7 @@
        vml.addListForm = !vml.addListForm;
      };
 
+     // Handles the display of the list menu toggle
      vml.toggleListMenu = function(id) {
        vml.listMenu[id] = !vml.listMenu[id];
      };
@@ -55,6 +56,11 @@
          vml.list = null;
          vml.toggleAddListForm();
        }
+     };
+
+     // Allows for editing of the list title when the text is clicked
+     vml.editListTitle = function() {
+       
      };
 
      // Trello has an archive function, for this demo, we'll delete instead
