@@ -16,7 +16,7 @@
      vml.addListButton = true;
      vml.addListForm = false;
      vml.addListButtonLabel = 'Add List...';
-     vml.listMenu = false;
+     vml.listMenu = {};
      // Use a number for the object name to keep the correct list order
      var numLists = 0;
      vml.list = null;
@@ -32,8 +32,8 @@
        vml.addListForm = !vml.addListForm;
      };
 
-     vml.toggleListMenu = function() {
-       vml.listMenu = !vml.listMenu;
+     vml.toggleListMenu = function(id) {
+       vml.listMenu[id] = !vml.listMenu[id];
      };
 
      // Adds a new list to the board
@@ -47,6 +47,9 @@
            label : vml.list.name,
            cards : []
          };
+
+         // Create a toggle variable for showing/hiding the list menu
+         vml.listMenu[numLists] = false;
 
          // Cleanup
          vml.list = null;
