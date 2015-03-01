@@ -1,58 +1,25 @@
+$list-width: 250px;
+
+.board-title {
+  padding-left: $spacing-regular;
+  color: $white;
+}
+
+.list-area {
+  display: flex;
+}
+
+.lists {
+  display: flex;
+  padding: $spacing-regular;
+  align-items: flex-start;
+}
+
 .add-list-button,
 .add-card-button {
   height: 35px;
   padding: $spacing-tiny $spacing-medium;
   text-align: left;
-}
-
-.add-list-form {
-  width: 250px;
-  min-width: 250px;
-  padding: $spacing-tiny;
-  border-radius: $rounded-corners-base;
-  background-color: $grey-light;
-
-  input {
-    display: block;
-    width: 95%;
-    padding: $spacing-tiny;
-
-    &[type="text"] {
-      margin-bottom: $spacing-tiny;
-      padding: $spacing-tiny $spacing-tiny 0;
-      transition: border .3s;
-      border-bottom: solid $border-normal $grey-light;
-      border-radius: $rounded-corners-tiny;
-      background-color: $grey-lighter;
-      font-size: $font-size-base;
-      line-height: $line-height-base;
-    }
-
-    &:focus {
-      border-bottom: solid $border-normal $grey;
-    }
-  }
-
-  button {
-    padding: $spacing-tiny $spacing-medium;
-    border-radius: $rounded-corners-tiny;
-    background-color: darken($turquoise, 10%);
-    color: $white;
-    line-height: $line-height-base;
-
-    &:hover {
-      background-color: darken($turquoise, 20%);
-    }
-  }
-
-  a {
-    color: darken($turquoise, 10%);
-    font-size: $font-size-large;
-
-    &:hover {
-      color: darken($turquoise, 20%);
-    }
-  }
 }
 
 .add-list-button {
@@ -70,7 +37,7 @@
 }
 
 .add-card-button {
-  width: 250px;
+  width: $list-width;
   margin-right: $spacing-medium;
   border-radius: 0 0 $rounded-corners-base $rounded-corners-base;
   background-color: $grey-lighter;
@@ -81,62 +48,77 @@
   }
 }
 
+.add-list-form {
+  min-width: $list-width;
+  padding: $spacing-tiny;
+  border-radius: $rounded-corners-base;
+  background-color: $grey-light;
+}
+
+.add-list-input {
+  width: 95%;
+  margin-bottom: $spacing-tiny;
+  padding: $spacing-tiny $spacing-tiny 0;
+  transition: border .3s;
+  border-bottom: solid $border-normal $grey-light;
+  border-radius: $rounded-corners-tiny;
+  background-color: $grey-lighter;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  &:focus {
+    border-bottom: solid $border-normal $grey;
+  }
+}
+
 .add-card-form {
-  width: 230px;
   min-width: 234px;
   margin: 0 auto;
   padding: $spacing-regular;
   border-radius: $rounded-corners-base;
-
-  textarea {
-    width: 90%;
-    height: 50px;
-    margin-left: $spacing-tiny;
-    padding: $spacing-regular;
-    border-radius: $rounded-corners-tiny;
-    font-size: $font-size-base;
-  }
-
-  button {
-    margin: $spacing-tiny;
-    padding: $spacing-tiny $spacing-medium;
-    border-radius: $rounded-corners-tiny;
-    background-color: darken($turquoise, 10%);
-    color: $white;
-    line-height: $line-height-base;
-
-    &:hover {
-      background-color: darken($turquoise, 20%);
-    }
-  }
-
-  a {
-    margin: 0;
-    padding-top: $spacing-regular;
-    color: darken($turquoise, 10%);
-    font-size: $font-size-display;
-
-    &:hover {
-      color: darken($turquoise, 20%);
-    }
-  }
 }
 
-.list-area {
-  display: flex;
-}
-
-.lists {
-  display: flex;
+.add-card-form-textarea {
+  width: 90%;
+  height: 50px;
+  margin-left: $spacing-tiny;
   padding: $spacing-regular;
-  align-items: flex-start;
+  border-radius: $rounded-corners-tiny;
+  font-size: $font-size-base;
+}
+
+.add-list-form-button,
+.add-card-form-button {
+  margin: $spacing-tiny;
+  padding: $spacing-tiny $spacing-medium;
+  border-radius: $rounded-corners-tiny;
+  background-color: darken($turquoise, 10%);
+  color: $white;
+  line-height: $line-height-base;
+
+  &:hover {
+    background-color: darken($turquoise, 20%);
+  }
+}
+
+.close-form-button {
+  position: relative;
+  top: 2px;
+  margin: 0;
+  padding-top: $spacing-regular;
+  color: darken($turquoise, 10%);
+  font-size: $font-size-display;
+
+  &:hover {
+    color: darken($turquoise, 20%);
+  }
 }
 
 .list {
   display: flex;
   position: relative; // to make dnd work
-  width: 250px;
-  min-width: 250px;
+  width: $list-width;
+  min-width: $list-width;
   min-height: 70px;
   margin-right: $spacing-medium;
   padding: 0;
@@ -156,48 +138,12 @@
   }
 }
 
-.cards {
-  flex-grow: 2;
-}
-
-.card {
-  display: flex;
-  position: relative; // to make dnd work
-  width: 85%;
-  margin: $spacing-regular auto;
-  padding: $spacing-regular;
-  border-radius: $rounded-corners-tiny;
-  background-color: $white;
-  box-shadow: 0 1px 1px 0 $grey;
-  justify-content: baseline;
-
-  i {
-    padding-top: $spacing-tiny/2;
-    visibility: hidden;
-  }
-
-  &:hover {
-    background-color: $grey-lightest;
-
-    i {
-      color: $grey-light;
-      visibility: visible;
-    }
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-    flex-grow: 2;
-  }
-}
-
 .list-header {
   display: flex;
   padding: $spacing-regular;
   justify-content: baseline;
 
-  h3 {
+  .list-label {
     flex-grow: 2;
   }
 
@@ -213,17 +159,18 @@
   left: 220px;
   width: 200px;
   padding: $spacing-medium;
+
   background-color: $white;
   box-shadow: 1px 1px 1px 2px rgba(127, 127, 127, .2);
   z-index: 10000;
 
-  ul {
+  .list-menu-nav {
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
 
-  li {
+  .list-menu-items {
     padding-bottom: $spacing-tiny;
   }
 }
@@ -243,19 +190,54 @@
   }
 }
 
-.divider {
-  margin-top: $spacing-regular;
-  padding-top: $spacing-regular;
-  border-top: 1px solid $grey-light;
-}
-
-
-.text-link {
+.list-menu-toggle {
   margin: 0;
   color: darken($turquoise, 10%);
   font-size: $font-size-base;
 
   &:hover {
     color: darken($turquoise, 20%);
+  }
+}
+
+.divider {
+  margin-top: $spacing-regular;
+  padding-top: $spacing-regular;
+  border-top: 1px solid $grey-light;
+}
+
+.cards {
+  flex-grow: 2;
+}
+
+.card {
+  display: flex;
+  position: relative; // to make dnd work
+  width: 85%;
+  margin: $spacing-regular auto;
+  padding: $spacing-regular;
+  border-radius: $rounded-corners-tiny;
+  background-color: $white;
+  box-shadow: 0 1px 1px 0 $grey;
+  justify-content: baseline;
+
+  .card-label {
+    margin: 0;
+    padding: 0;
+    flex-grow: 2;
+  }
+
+  i {
+    padding-top: $spacing-tiny/2;
+    visibility: hidden;
+  }
+
+  &:hover {
+    background-color: $grey-lightest;
+
+    i {
+      color: $grey-light;
+      visibility: visible;
+    }
   }
 }

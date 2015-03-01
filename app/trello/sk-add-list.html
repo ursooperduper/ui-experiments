@@ -1,7 +1,7 @@
 <div class="add-list-form" ng-show="vml.addListForm" off-click="vml.toggleAddListForm()" off-click-if="vml.addListForm">
   <form name="addNewList" novalidate>
-    <input type="text" name="listName" placeholder="Enter a list title..." ng-model="vml.list.name" focus-me="focusInput" required>
-    <button ng-click="vml.addList()">Save</button>
-    <a href="" ng-click="vml.toggleAddListForm()"><i class="fa fa-times"></i></a>
+    <input class="add-list-input" type="text" name="listName" placeholder="Enter a list title..." ng-model="vml.list.name" focus-me="focusInput" required>
+    <button class="add-list-form-button" ng-click="vml.addList()">Save</button>
+    <a class="close-form-button" href="" ng-click="vml.toggleAddListForm()"><i class="fa fa-times"></i></a>
   </form>
 </div>

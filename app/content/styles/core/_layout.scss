@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: row wrap;
+}
+
+.left-side {
+  display: flex;
+  width: 160px;
+  padding: $spacing-large $spacing-regular;
+  border-right: $spacing-regular solid $grey;
+  background-color: $grey-dark;
+  color: $white;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.toc {
+  margin: 0;
+  padding: $spacing-large 0;
+  list-style-type: none;
+}
+
+.toc-item {
+  padding-bottom: $spacing-tiny;
+  color: $grey-lighter;
+}
+
+.right-side {
+  display: flex;
+  width: 99%;
+  padding: $spacing-large;
+  background-color: $white;
+  color: $grey-dark;
+  flex: 2;
+  flex-direction: column;
+}
+
+.experiment-area {
+  height: 90%;
+  padding: $spacing-regular;
+  background-color: $turquoise;
+  overflow: auto;
+  flex-grow: 2;
+}
+
+.intro {
+  width: 70%;
+  margin-bottom: $spacing-regular;
+}

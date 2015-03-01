@@ -1,7 +1,7 @@
 <div class="add-card-form" ng-show="vmc.addCardForm" off-click="vmc.toggleAddCardForm()" off-click-if="vmc.addCardForm">
   <form name="addNewCard" novalidate>
-    <textarea name="cardTitle" ng-model="vmc.card.title" focus-me="focusInput" required></textarea>
-    <button ng-click="vmc.addCard()">Add</button>
-    <a href="" ng-click="vmc.toggleAddCardForm()"><i class="fa fa-times"></i></a>
+    <textarea class="add-card-form-textarea" name="cardTitle" ng-model="vmc.card.title" focus-me="focusInput" required></textarea>
+    <button class="add-card-form-button" ng-click="vmc.addCard()">Add</button>
+    <a href="" class="close-form-button" ng-click="vmc.toggleAddCardForm()"><i class="fa fa-times"></i></a>
   </form>
 </div>

@@ -13,7 +13,6 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="app">
@@ -22,16 +21,16 @@
     <![endif]-->
 
     <div class="container">
-
       <div class="left-side">
         <h1>UI Experiments</h1>
-        <ul class="toc">
-          <li><a ng-href="#">About</a></li>
-          <li><a ng-href="#/trello">Trello</a></li>
-        </ul>
-        <p class="footer">UI <i class="fa fa-flask"></i> by Sarah Kuehnle with AngularJS.</p>
+        <nav>
+          <ul class="toc">
+            <li><a class="toc-item" ng-href="#">About</a></li>
+            <li><a class="toc-item" ng-href="#/trello">Trello</a></li>
+          </ul>
+        </nav>
+        <footer>UI <i class="fa fa-flask"></i> by Sarah Kuehnle with AngularJS.</footer>
       </div>
-
       <div class="right-side" ng-view=""></div>
     </div>
 

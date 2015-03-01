@@ -1,17 +1,4 @@
-.browsehappy {
-  margin: $spacing-regular 0;
-  padding: $spacing-regular 0;
-  background: #ccc;
-  color: #000;
-}
-
-html {
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-  overflow-y: scroll;
-}
-
+html,
 body {
   height: 100%;
   margin: 0 auto;
@@ -20,19 +7,22 @@ body {
   font: $font-size-base $font-family-base;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
+}
+
+h1 {
   color: $white;
   font: $font-size-display $font-family-bold;
 }
 
-h2,
-h4 {
-  margin: 0;
-}
-
-h3 {
-  margin: 0 0 $spacing-medium;
+p {
+  margin-bottom: $spacing-tiny;
 }
 
 input,
@@ -48,67 +38,14 @@ button {
   }
 }
 
-.container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-flow: row wrap;
+footer {
+  color: $grey-light;
+  font-size: $font-size-small;
 }
 
-.left-side {
-  display: flex;
-  width: 160px;
-  padding: $spacing-large $spacing-regular;
-  border-right: $spacing-regular solid $grey;
-  background-color: $grey-dark;
-  color: $white;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  a {
-    color: $grey-lighter;
-  }
-}
-
-.right-side {
-  display: flex;
-  width: 99%;
-  padding: $spacing-large;
-  background-color: $white;
-  color: $grey-dark;
-  flex: 2;
-  flex-direction: column;
-}
-
-.experiment-area {
-  height: 90%;
-  padding: $spacing-regular;
-  background-color: $turquoise;
-  overflow: auto;
-  flex-grow: 2;
-
-  h2 {
-    padding-left: $spacing-regular;
-    color: $white;
-  }
-}
-
-.toc {
-  margin: 0;
-  padding: $spacing-large 0;
-  list-style-type: none;
-
-  li {
-    padding-bottom: $spacing-tiny;
-  }
-}
-
-.intro {
-  width: 70%;
-  margin-bottom: $spacing-regular;
-
-  h2,
-  p {
-    margin-bottom: $spacing-tiny;
-  }
+.browsehappy {
+  margin: $spacing-regular 0;
+  padding: $spacing-regular 0;
+  background: #ccc;
+  color: #000;
 }
