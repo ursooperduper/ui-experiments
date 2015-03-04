@@ -1,0 +1,23 @@
+<div
+  class="edit-list"
+  ng-show="vml.editListForm[list.id]"
+  off-click="vml.toggleEditListForm(list.id)"
+  off-click-if="vml.editListForm[list.id]">
+  <form name="editList" novalidate>
+    <input
+      class="list-input"
+      type="text"
+      name="listName"
+      ng-model="list.title"
+      focus-me="focusInput"
+      required>
+    <button
+      class="add-list-form-button"
+      ng-click="vml.editList(list.id)">Save</button>
+    <a
+      class="close-form-button"
+      href=""
+      ng-click="vml.editList(list.id, 'cancel')">
+      <i class="fa fa-times"></i></a>
+  </form>
+</div>

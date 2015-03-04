@@ -5,8 +5,6 @@ $list-width: 250px;
   color: $white;
 }
 
-.list-area { display: flex; }
-
 .lists {
   display: flex;
   padding: $spacing-regular;
@@ -48,17 +46,17 @@ $list-width: 250px;
   min-width: $list-width;
   padding: $spacing-tiny;
   border-radius: $rounded-corners-base;
-  background-color: $grey-light;
+  background-color: $grey-lighter;
 }
 
-.add-list-input {
+.list-input {
   width: 95%;
   margin-bottom: $spacing-tiny;
   padding: $spacing-tiny $spacing-tiny 0;
   transition: border .3s;
   border-bottom: solid $border-normal $grey-light;
   border-radius: $rounded-corners-tiny;
-  background-color: $grey-lighter;
+  background-color: $white;
   font-size: $font-size-base;
   line-height: $line-height-base;
 
@@ -133,7 +131,11 @@ $list-width: 250px;
   padding: $spacing-regular;
   justify-content: baseline;
 
-  .list-label { flex-grow: 2; }
+  .list-label {
+    display: inline-block;
+    cursor: pointer;
+    flex-grow: 2;
+  }
 
   i {
     padding-top: $spacing-tiny/2;

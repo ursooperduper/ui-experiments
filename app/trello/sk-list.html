@@ -1,12 +1,19 @@
-<div class="list" ng-repeat="list in vml.models.lists" dnd-list="list.cards">
+<div class="list"
+     ng-repeat="list in vml.models.lists"
+     dnd-list="list.cards">
   <div class="list-header">
-    <h3 class="list-label">{{ list.label }}</h3>
-    <a href="" ng-click="vml.toggleListMenu(list.id)"><i class="fa fa-chevron-circle-down"></i></a>
-  </div>
-  <div ng-controller="CardController as vmc" dnd-list="list.cards">
+    <h3 class="list-label"
+        ng-show="vml.listTitle[list.id]"
+        ng-click="vml.toggleEditListForm(list.id); focusInput=true">
+      {{ list.title }}</h3>
+    <a ng-show="vml.listMenuToggle[list.id]"
+       ng-click="vml.toggleListMenu(list.id)">
+      <i class="fa fa-chevron-circle-down"></i></a>
     <sk-list-menu></sk-list-menu>
+    <sk-edit-list></sk-edit-list>
+  </div>
+  <div dnd-list="list.cards">
     <sk-card></sk-card>
     <sk-add-card></sk-add-card>
-    <button class="add-card-button" ng-click="vmc.toggleAddCardForm(); focusInput=true" ng-show="vmc.addCardButton">Add a card...</button>
   </div>
 </div>

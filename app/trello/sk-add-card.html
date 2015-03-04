@@ -1,7 +1,28 @@
-<div class="add-card-form" ng-show="vmc.addCardForm" off-click="vmc.toggleAddCardForm()" off-click-if="vmc.addCardForm">
-  <form name="addNewCard" novalidate>
-    <textarea class="add-card-form-textarea" name="cardTitle" ng-model="vmc.card.title" focus-me="focusInput" required></textarea>
-    <button class="add-card-form-button" ng-click="vmc.addCard()">Add</button>
-    <a href="" class="close-form-button" ng-click="vmc.toggleAddCardForm()"><i class="fa fa-times"></i></a>
-  </form>
-</div>
+<section>
+  <button
+    class="add-card-button"
+    ng-click="vml.toggleAddCardForm(list.id); focusInput=true"
+    ng-show="vml.addCardButton[list.id]">Add a card...</button>
+  <div
+    class="add-card-form"
+    ng-show="vml.addCardForm[list.id]"
+    off-click="vml.toggleAddCardForm(list.id)"
+    off-click-if="vml.addCardForm[list.id]">
+    <form name="addNewCard" novalidate>
+      <textarea
+        class="add-card-form-textarea"
+        name="cardTitle"
+        ng-model="vml.card.title"
+        focus-me="focusInput"
+        required></textarea>
+      <button
+        class="add-card-form-button"
+        ng-click="vml.addCard(list.id)">Add</button>
+      <a
+        href=""
+        class="close-form-button"
+        ng-click="vml.toggleAddCardForm(list.id)">
+        <i class="fa fa-times"></i></a>
+    </form>
+  </div>
+</section>

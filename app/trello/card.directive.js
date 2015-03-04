@@ -5,6 +5,7 @@
     return {
       restrict: 'E',
       replace: true,
+      scope: true,
       templateUrl: 'trello/sk-card.html'
     };
   }

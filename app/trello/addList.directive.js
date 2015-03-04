@@ -5,7 +5,8 @@
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'trello/sk-add-list.html'
+      scope: true,
+      templateUrl: 'trello/sk-add-list.html'  
     };
   }
 
