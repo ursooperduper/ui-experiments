@@ -79,7 +79,6 @@
        if (vml.editListForm[id]) {
         //  vml.list = vml.models.lists[id];
          oldListLabel = vml.models.lists[id].title;
-         console.log('oldListLabel: ', oldListLabel);
        }
      };
 
