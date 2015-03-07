@@ -9,7 +9,7 @@
    * Manages everything to do with Trello-style lists.
    */
   function ListController() {
-    // vml stands for ViewModelList
+    // vml stands for View Model List
     var vml = this;
     var oldListLabel = null;
 
@@ -85,7 +85,7 @@
      // Allows for editing of the list title when the text is clicked
      vml.editList = function(id, action) {
        if (action === 'cancel') {
-         vml.models.lists[id].label = oldListLabel;
+         vml.models.lists[id].title = oldListLabel;
        }
        vml.toggleEditListForm(vml.models.lists[id].id);
      };
