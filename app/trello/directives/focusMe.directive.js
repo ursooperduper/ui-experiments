@@ -17,6 +17,6 @@
   }
 
   angular
-    .module('app')
+    .module('uiApp')
     .directive('focusMe', ['$timeout', focusMe]);
 })();

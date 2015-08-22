@@ -1,27 +1,27 @@
 <section>
   <button
     class="add-card-button"
-    ng-click="vml.toggleAddCardForm(list.id); focusInput=true"
-    ng-show="vml.addCardButton[list.id]">Add a card...</button>
+    ng-click="toggleAddCardForm(list.id); focusInput=true"
+    ng-show="addCardButton[list.id]">Add a card...</button>
   <div
     class="add-card-form"
-    ng-show="vml.addCardForm[list.id]"
-    off-click="vml.toggleAddCardForm(list.id)"
-    off-click-if="vml.addCardForm[list.id]">
+    ng-show="addCardForm[list.id]"
+    off-click="toggleAddCardForm(list.id)"
+    off-click-if="addCardForm[list.id]">
     <form name="addNewCard" novalidate>
       <textarea
         class="add-card-form-textarea"
         name="cardTitle"
-        ng-model="vml.card.title"
+        ng-model="card.title"
         focus-me="focusInput"
         required></textarea>
       <button
         class="add-card-form-button"
-        ng-click="vml.addCard(list.id)">Add</button>
+        ng-click="addCard(list.id)">Add</button>
       <a
         href=""
         class="close-form-button"
-        ng-click="vml.toggleAddCardForm(list.id)">
+        ng-click="toggleAddCardForm(list.id)">
         <i class="fa fa-times"></i></a>
     </form>
   </div>

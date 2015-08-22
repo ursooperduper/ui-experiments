@@ -1,0 +1,17 @@
+<div
+  class="edit-card"
+  ng-show="editCardForm[card.id]"
+  off-click="toggleEditCard(card.id)"
+  off-click-if="editCardForm[card.id]">
+  <form name="editCard" novalidate>
+    <textarea
+      class="card-input"
+      name="cardTitle"
+      ng-model="card.title"
+      focus-me="focusInput"
+      required></textarea>
+    <button
+      class="edit-card-form-button"
+      ng-click="editCard(card.id)">Save</button>
+  </form>
+</div>

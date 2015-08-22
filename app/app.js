@@ -3,24 +3,22 @@
 
   /**
    * @ngdoc overview
-   * @name app
+   * @name uiApp
    * @description
-   * # app
+   * # uiApp
    *
    * Main module of the application.
    */
 
   function routeConfig($routeProvider) {
    $routeProvider
-     .when('/', {
+     .when('/about', {
        templateUrl: 'about/about.html',
-       controller: 'AboutController',
-       controllerAs: 'vma'
+       controller: 'AboutController'
      })
      .when('/trello', {
        templateUrl: 'trello/index.html',
-       controller: 'ListController',
-       controllerAs: 'vml'
+       controller: 'ListController'
      })
      .otherwise({
        redirectTo: '/'
@@ -28,7 +26,7 @@
    }
 
   angular
-    .module('app', [
+    .module('uiApp', [
       'ngAnimate',
       'ngResource',
       'ngRoute',

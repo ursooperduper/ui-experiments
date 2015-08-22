@@ -1,13 +1,14 @@
 <header class="intro">
   <h2>Trello</h2>
-  <p>Trello is a list and card based planning tool that can be used to organize
-    just about anything. Users create lists and cards. Cards can be dragged within or across lists to organize or prioritize.</p>
-  <p>This experiment shows the basic interaction of creating lists and cards and
-    reordering cards.</p>
+  <p>Trello is a list &amp; card based planning tool that can be used to
+    organize just about anything. The app features draggable lists and cards
+    that can also include pictures, checklists, due dates, and more.</p>
+  <p>This experiment shows the basic interaction of creating lists and cards,
+    and reordering cards.</p>
 </header>
 <div class="experiment-area">
   <h2 class="board-title">Demo Board</h2>
-  <div class="lists">
+  <div class="lists" ng-controller="ListController">
     <sk-list></sk-list>
     <sk-add-list></sk-add-list>
   </div>

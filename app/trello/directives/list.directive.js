@@ -5,13 +5,12 @@
     return {
       restrict: 'E',
       replace: true,
-      scope: true,
-      templateUrl: 'trello/sk-list.html'
+      templateUrl: 'trello/templates/sk-list.html'
     };
   }
 
   angular
-    .module('app')
+    .module('uiApp')
     .directive('skList', list);
 
 })();

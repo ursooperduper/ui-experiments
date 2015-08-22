@@ -131,9 +131,10 @@ $list-width: 250px;
   padding: $spacing-regular;
   justify-content: baseline;
 
-  .list-label {
+  .list-title {
     display: inline-block;
     cursor: pointer;
+    font-size: $font-size-base;
     flex-grow: 2;
   }
 
@@ -203,7 +204,7 @@ $list-width: 250px;
   box-shadow: 0 1px 1px 0 $grey;
   justify-content: baseline;
 
-  .card-label {
+  .card-title {
     margin: 0;
     padding: 0;
     flex-grow: 2;

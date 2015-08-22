@@ -1,30 +1,30 @@
 <section>
   <button
     class="add-list-button"
-    ng-click="vml.toggleAddListForm(); focusInput=true"
-    ng-show="vml.addListButton">Add List...</button>
+    ng-click="toggleAddListForm(); focusInput=true"
+    ng-show="addListButton">Add List...</button>
 
   <div
     class="add-list-form"
-    ng-show="vml.addListForm"
-    off-click="vml.toggleAddListForm()"
-    off-click-if="vml.addListForm">
+    ng-show="addListForm"
+    off-click="toggleAddListForm()"
+    off-click-if="addListForm">
     <form name="addNewList" novalidate>
       <input
         class="list-input"
         type="text"
         name="listName"
         placeholder="Enter a list title..."
-        ng-model="vml.list.name"
+        ng-model="list.name"
         focus-me="focusInput"
         required>
       <button
         class="add-list-form-button"
-        ng-click="vml.addList()">Save</button>
+        ng-click="addList()">Save</button>
       <a
         class="close-form-button"
         href=""
-        ng-click="vml.toggleAddListForm()">
+        ng-click="toggleAddListForm()">
         <i class="fa fa-times"></i></a>
     </form>
   </div>
