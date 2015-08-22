@@ -12,7 +12,7 @@
           scope.addCardButton[id] = !scope.addCardButton[id];
           scope.addCardForm[id]   = !scope.addCardForm[id];
         };
-        
+
         // Adds a new card to a list
         scope.addCard = function(id) {
           if (scope.card !== null) {
@@ -33,7 +33,6 @@
             scope.card = null;
           }
         };
-
       }
     };
   }

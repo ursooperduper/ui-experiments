@@ -17,7 +17,6 @@
         scope.editCard = function(id) {
           scope.toggleEditCard(scope.card[id]);
         };
-
       }
     };
   }

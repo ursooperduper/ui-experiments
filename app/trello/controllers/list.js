@@ -1,6 +1,5 @@
 (function() {
   'use strict';
-
   /**
    * @ngdoc function
    * @name uiApp.controller:ListController
@@ -9,7 +8,6 @@
    * Manages everything to do with Trello-style lists.
    */
   function ListController($scope) {
-
     //Initializers
     $scope.oldListLabel   = null;
     $scope.listTitle      = {};
@@ -33,40 +31,6 @@
       selected : null,
       lists    : {}
     };
-
-     // Adds a new list to the board
-    $scope.addList = function() {
-      if ($scope.list !== null) {
-        $scope.numLists += 1;
-
-        // Add a new list object to the model
-        $scope.models.lists[$scope.numLists] = {
-          id    : $scope.numLists,
-          title : $scope.list.name,
-          cards : []
-        };
-
-        // Create show/hide variables
-        $scope.listTitle[$scope.numLists]      = true;
-        $scope.listMenu[$scope.numLists]       = false;
-        $scope.listMenuToggle[$scope.numLists] = true;
-        $scope.editListForm[$scope.numLists]   = false;
-        $scope.addCardButton[$scope.numLists]  = true;
-        $scope.addCardForm[$scope.numLists]    = false;
-
-        // Cleanup
-        $scope.list = null;
-        $scope.toggleAddListForm();
-      }
-    };
-
-    // Trello has an archive function, for this demo, we'll delete instead
-    $scope.archiveList = function(id) {
-      // $scope.numLists -= 1;
-      delete $scope.models.lists[id];
-    };
-
-
   }
 
   angular.module('uiApp')

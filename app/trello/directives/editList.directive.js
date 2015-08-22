@@ -18,7 +18,6 @@
            }
          };
 
-
          // Allows for editing of the list title when the text is clicked
          scope.editList = function(id, action) {
            if (action === 'cancel') {
