@@ -13,6 +13,11 @@
           scope.cardItem[id]       = !scope.cardItem[id];
           scope.editCardForm[id]   = !scope.editCardForm[id];
         };
+
+        scope.editCard = function(id) {
+          scope.toggleEditCard(scope.card[id]);
+        };
+
       }
     };
   }

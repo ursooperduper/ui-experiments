@@ -17,6 +17,17 @@
              scope.oldListLabel = scope.models.lists[id].title;
            }
          };
+
+
+         // Allows for editing of the list title when the text is clicked
+         scope.editList = function(id, action) {
+           if (action === 'cancel') {
+             console.log('Canceling');
+              scope.models.lists[id].title = scope.oldListLabel;
+           }
+           scope.toggleEditListForm(scope.models.lists[id].id);
+         };
+
       }
     };
   }

@@ -9,6 +9,7 @@
       link: function(scope) {
         scope.addListButton = true;
         scope.addListForm   = false;
+
         scope.toggleAddListForm = function() {
           scope.addListButton = !scope.addListButton;
           scope.addListForm   = !scope.addListForm;
