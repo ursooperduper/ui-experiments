@@ -11,7 +11,7 @@
     ng-show="cardItem[card.id]">{{ card.title }}</p>
   <a
     ng-show="editCardToggle[card.id]"
-    ng-click="toggleEditCard(card.id)">
+    ng-click="toggleEditCardForm(card.id); holdOldCardTitle(list.id, $index)">
     <i class="fa fa-pencil"></i></a>
   <sk-edit-card></sk-edit-card>
 </div>

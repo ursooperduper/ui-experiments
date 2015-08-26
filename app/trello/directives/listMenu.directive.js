@@ -11,11 +11,6 @@
         scope.toggleListMenu = function(id) {
           scope.listMenu[id] = !scope.listMenu[id];
         };
-
-        // Trello has an archive function, for this demo, we'll delete instead
-        scope.archiveList = function(id) {
-          delete scope.models.lists[id];
-        };
       }
     };
   }
