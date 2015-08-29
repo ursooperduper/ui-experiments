@@ -2,10 +2,8 @@
   'use strict';
 
   function ListService() {
-
     var numLists = 0;
     var numCards = -1;
-    // var card = null;
     var oldListTitle = null;
     var oldCardTitle = null;
 

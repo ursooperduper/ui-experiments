@@ -9,16 +9,8 @@
    */
   function ListController($scope, ListService) {
     //Initializers
-    $scope.oldListLabel   = null;
-    $scope.oldCardTitle   = null;
-    $scope.listTitle      = {};
-    $scope.editListForm   = {};
-    $scope.listMenu       = {};
-    $scope.listMenuToggle = {};
-    $scope.addCardButton  = {};
-    $scope.addCardForm    = {};
-    $scope.cardItem       = {};
     $scope.editCardToggle = {};
+    $scope.cardItem       = {};
     $scope.editCardForm   = {};
     $scope.list           = null;
     $scope.card           = null;
@@ -32,17 +24,8 @@
     $scope.addList = function() {
       if ($scope.list.name !== null) {
         var newListNum = ListService.newList($scope.list.name);
-
-        // ??? Move this to a function in the add directive?
-        // Create show/hide variables
-        $scope.listTitle[newListNum]      = true;
-        $scope.listMenu[newListNum]       = false;
-        $scope.listMenuToggle[newListNum] = true;
-        $scope.editListForm[newListNum]   = false;
-        $scope.addCardButton[newListNum]  = true;
-        $scope.addCardForm[newListNum]    = false;
-
         // Cleanup
+        $scope.toggleListUI(newListNum);
         $scope.list = null;
         $scope.toggleAddListForm();
       }
@@ -61,17 +44,11 @@
     };
 
     $scope.addCard = function(listId) {
-      var cardTitle = this.card.title;
-
       if (this.card !== null) {
+        var cardTitle = this.card.title;
         var newCard = ListService.newCard(listId, cardTitle);
-        // Set up show/hide for the edit functions
-        // ?? Move this to a function in directive?
-        $scope.editCardToggle[newCard] = true;
-        $scope.cardItem[newCard]       = true;
-        $scope.editCardForm[newCard]   = false;
-
         // Cleanup, reset the card
+        this.toggleCardUI(newCard);
         this.card = null;
       }
     };
