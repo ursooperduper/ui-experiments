@@ -9,24 +9,23 @@
    */
   function ListController($scope, ListService) {
     //Initializers
+
     $scope.editCardToggle = {};
     $scope.cardItem       = {};
     $scope.editCardForm   = {};
     $scope.list           = null;
     $scope.card           = null;
-    $scope.addListButton  = true;
-    $scope.addListForm    = false;
 
     // Get the model from the ListService.
-    // All list and card data is stored in this model
+    // All list and card data is stored in the model
     $scope.model = ListService.listAll();
 
     $scope.addList = function() {
       if ($scope.list.name !== null) {
         var newListNum = ListService.newList($scope.list.name);
         // Cleanup
-        $scope.toggleListUI(newListNum);
         $scope.list = null;
+        $scope.toggleListUI(newListNum);
         $scope.toggleAddListForm();
       }
     };

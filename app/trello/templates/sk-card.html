@@ -6,12 +6,15 @@
   dnd-effect-allowed="move"
   dnd-selected="models.selected = card"
   ng-class="{'selected': models.selected === card}">
-  <p
-    class="card-title"
-    ng-show="cardItem[card.id]">{{ card.title }}</p>
-  <a
-    ng-show="editCardToggle[card.id]"
-    ng-click="toggleEditCardForm(card.id); holdOldCardTitle(list.id, $index)">
-    <i class="fa fa-pencil"></i></a>
+  <sk-card-labels></sk-card-labels>
+  <div class="card-details">
+    <p
+      class="card-title"
+      ng-show="cardItem[card.id]">{{ card.title }}</p>
+    <a
+      ng-show="editCardToggle[card.id]"
+      ng-click="toggleEditCardForm(card.id); holdOldCardTitle(list.id, $index)">
+      <i class="fa fa-pencil"></i></a>
+  </div>
   <sk-edit-card></sk-edit-card>
 </div>

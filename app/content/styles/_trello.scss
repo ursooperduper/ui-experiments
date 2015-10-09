@@ -203,6 +203,12 @@ $list-width: 250px;
   background-color: $white;
   box-shadow: 0 1px 1px 0 $grey;
   justify-content: baseline;
+  flex-direction: column;
+
+  .card-details {
+    display: flex;
+    flex-direction: row;
+  }
 
   .card-title {
     margin: 0;
@@ -210,7 +216,7 @@ $list-width: 250px;
     flex-grow: 2;
   }
 
-  i {
+  a {
     padding-top: $spacing-tiny/2;
     visibility: hidden;
   }
@@ -222,5 +228,55 @@ $list-width: 250px;
       color: $grey-light;
       visibility: visible;
     }
+  }
+}
+
+.card-labels {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Colors for card labels */
+$green: #32CD32;
+$yellow: #FFFF00;
+$orange: #FF8C00;
+$red: #B22222;
+$purple: #8A2BE2;
+$blue: #1E90FF;
+
+
+@each $colorName, $colorValue in ("green" : $green, "yellow" : $yellow, "orange" : $orange, "red" : $red, "purple" : $purple, "blue" : $blue) {
+  .#{$colorName}-label {
+    background-color: $colorValue;
+    width: 28px;
+  	height: 6px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+  	-moz-border-radius: 20px;
+  	-webkit-border-radius: 20px;
+  	border-radius: 20px;
+  }
+}
+
+.cardMenu {
+  position: absolute;
+  left: 190px;
+  top: -10px;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+
+  li {
+    background-color: $grey-dark;
+    /* opacity: 0.5; */
+    color: $white;
+    margin-top: $spacing-tiny;
+    margin-bottom: $spacing-tiny;
+    padding: $spacing-regular;
+    -moz-border-radius: $spacing-tiny;
+  	-webkit-border-radius: $spacing-tiny;
+  	border-radius: $spacing-tiny;
   }
 }
